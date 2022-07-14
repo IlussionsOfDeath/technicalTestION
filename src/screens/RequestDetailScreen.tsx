@@ -64,10 +64,18 @@ const RequestDetailScreen = (props: any) => {
                     source={ require('../assets/images/graphic.png') }
                     style={ general.containerGraphic }
                 >
-                    <Text style={ general.labelGraphic }>Tu pago menual</Text>
-                    <Text style={[ general.labelGraphic, { fontSize: 24, marginTop: 4, }]}>{ formatMoney(12000) }</Text>
-                    <Text style={[ general.labelGraphic, { fontSize: 14, }]}>a 60 meses</Text>
-                    <Text style={ general.footerGraphic }>Tasa de interés {'\n'} 16.6%</Text>
+                    <Text style={ general.labelGraphic }>
+                        Tu pago mensual
+                    </Text>
+                    <Text style={[ general.labelGraphic, { fontSize: 24, marginTop: 4, }]}>
+                        { formatMoney(12000) }
+                    </Text>
+                    <Text style={[ general.labelGraphic, { fontSize: 14, }]}>
+                        a 60 meses
+                    </Text>
+                    <Text style={ general.footerGraphic }>
+                        Tasa de interés {'\n'} 16.6%
+                    </Text>
                 </ImageBackground>
 
                 <CustomButton
