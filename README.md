@@ -10,15 +10,15 @@ Una vez clonado, ejecutamos el comando de instalación de librerías que sería 
 Una vez que se instalaron los paquetes utilizados, debemos correr desde la ruta del proyecto el comando para iniciar la ejecución del proyecto de manera local, que sería mediante la consola: npm start, una vez que se esta ejecutando, en otra terminal o ventana de esta, debemos ejecutar el comando npm run android o npm run ios dependiendo el emulador o dispositivo movil que estaremos utilizando.
 
 # Detalles del proyecto
-*Navegación: para el tema de la navegación entre las vistas se trabajo con react-navigation(native-stack y material-bottom-tabs) los cuales presentan Nested de las diferentes navegaciones que se trabajaron.
-*Se cuenta con una vista principal : HomeScreen la cual presenta todos los componentes que se indicaron en el diseño que se nos compartio, para el tema de los iconos se trabajo con react-native-vector-icons y se implementaron los más similares al diseño.
+* Navegación: para el tema de la navegación entre las vistas se trabajo con react-navigation(native-stack y material-bottom-tabs) los cuales presentan Nested de las diferentes navegaciones que se trabajaron.
+* Se cuenta con una vista principal : HomeScreen la cual presenta todos los componentes que se indicaron en el diseño que se nos compartio, para el tema de los iconos se trabajo con react-native-vector-icons y se implementaron los más similares al diseño.
   * Se crearon componentes dinámicos para la parte del Header, Botones, Inputs y Listados (FlatList) los cuales obtienen las propiedades de sus componentes o vistas padre.
 Para el tema de la información que se muestra en las vistas, se trabajo con un JSON object.
   * Se generaro un hook para el formateo de los textos de moneda, así como un hook para la gestión de los inputs.
 
-*Vista detallada de movimientos: HomeDetailScreen la cual nos sire para ver el detalle del movimiento que se elija y nos permitira ver información más detallada del mismo.
+* Vista detallada de movimientos: HomeDetailScreen la cual nos sire para ver el detalle del movimiento que se elija y nos permitira ver información más detallada del mismo.
 
-*Vista nueva disposición: RequestDetailScreen la cual permite capturar nuevas disposiciones y hacer un cálculo del mismo en un plazo especificado. Nota: Al dar clic en Lo quiero solo imprime en consola, los datos que se ingresaron en los inputs y el cálculo realizado, ya que no se generaron o usaron servicios RestAPI.
+* Vista nueva disposición: RequestDetailScreen la cual permite capturar nuevas disposiciones y hacer un cálculo del mismo en un plazo especificado. Nota: Al dar clic en Lo quiero solo imprime en consola, los datos que se ingresaron en los inputs y el cálculo realizado, ya que no se generaron o usaron servicios RestAPI.
 
 # Notas
 El proyecto esta optimizado para dispositivos android y se está trabajando en ajustes pendientes de IOs.
