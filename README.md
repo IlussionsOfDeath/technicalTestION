@@ -18,7 +18,7 @@ Para el tema de la información que se muestra en las vistas, se trabajo con un 
 
 * Vista detallada de movimientos: HomeDetailScreen la cual nos sire para ver el detalle del movimiento que se elija y nos permitira ver información más detallada del mismo.
 
-* Vista nueva disposición: RequestDetailScreen la cual permite capturar nuevas disposiciones y hacer un cálculo del mismo en un plazo especificado. Nota: Al dar clic en Lo quiero solo imprime en consola, los datos que se ingresaron en los inputs y el cálculo realizado, ya que no se generaron o usaron servicios RestAPI.
+* Vista nueva disposición: RequestDetailScreen la cual permite capturar nuevas disposiciones y hacer un cálculo del mismo en un plazo especificado. Nota: Al dar clic en Lo quiero solo imprime en consola, los datos que se ingresaron en los inputs, ya que no se generaron o usaron servicios RestAPI.
 
 # Notas
 El proyecto esta optimizado para dispositivos android y se está trabajando en ajustes pendientes de IOs.
