@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import formatNumber from '../hooks/useFormat';
+import formatMoney from '../hooks/useFormat';
 
 import { colors, general } from '../assets/customTheme';
 
@@ -15,7 +15,7 @@ const CustomHistory = (item: any) => {
         <TouchableOpacity
             activeOpacity={ colors.opacity }
             onPress={ () => navigation.navigate('HomeDetail', item) }
-            style={[ styles.itemCard, general.globalMinPadding ]}
+            style={[ styles.itemCard, general.globalMinPadding, general.shadow ]}
         >
             <View style={{ alignItems: 'center', flexDirection: 'row', }}>
                 <View style={{ height: 40, justifyContent: 'center', width: 40, }}>
@@ -35,7 +35,7 @@ const CustomHistory = (item: any) => {
                             { item?.type }
                         </Text>
                         <Text style={ styles.cardTitle }>
-                            { formatNumber(item?.amount) }
+                            { formatMoney(item?.amount) }
                         </Text>
                     </View>
                 </View>

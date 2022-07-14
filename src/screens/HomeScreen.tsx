@@ -8,7 +8,7 @@ import CustomHeader from '../components/CustomHeader';
 import CustomButton from '../components/CustomButton';
 import CustomHistory from '../components/CustomHistory';
 
-import formatNumber from '../hooks/useFormat';
+import formatMoney from '../hooks/useFormat';
 
 import movements from '../helpers/dataJson/movements';
 import accountStatus from '../helpers/dataJson/accountStatus';
@@ -35,12 +35,12 @@ const HomeScreen = ({ navigation }: Navigation) => {
         <View style={ general.fullScreen }>
             <CustomHeader isHome navigation={ navigation } />
 
-            <View style={[ general.globalMargin, general.containerAmount ]}>
+            <View style={[ general.globalMargin, general.containerAmount, general.shadow ]}>
                 <Text style={ general.labelAmount }>
                     SALDO DISPONIBLE
                 </Text>
                 <Text style={ general.textAmount }>
-                    { formatNumber(accountStatus.amount) }
+                    { formatMoney(accountStatus.amount) }
                 </Text>
             </View>
 
@@ -75,12 +75,12 @@ const HomeScreen = ({ navigation }: Navigation) => {
                 </TouchableOpacity>
             </View>
 
-            <View style={[ general.globalMargin, general.containerStatus ]}>
+            <View style={[ general.globalMargin, general.containerStatus, general.shadow  ]}>
                 <Text style={ general.labelStatus }>
                     Tu próximo pago
                 </Text>
                 <Text style={ general.textStatus }>
-                    { formatNumber(accountStatus.nextPayment) }
+                    { formatMoney(accountStatus.nextPayment) }
                 </Text>
                 <View style={ general.alignBetween }>
                     <View>
@@ -103,7 +103,7 @@ const HomeScreen = ({ navigation }: Navigation) => {
                         </Text>
                     </View>
                     <Text style={ general.textFooterStatus }>
-                        { formatNumber(accountStatus.archivement) }
+                        { formatMoney(accountStatus.archivement) }
                     </Text>
                 </View>
                 <View style={[ general.containerFooterStatus, ]}>
@@ -113,7 +113,7 @@ const HomeScreen = ({ navigation }: Navigation) => {
                         </Text>
                     </View>
                     <Text style={ general.textFooterStatus }>
-                        { formatNumber(accountStatus.purchasesTDC) }
+                        { formatMoney(accountStatus.purchasesTDC) }
                     </Text>
                 </View>
             </View>

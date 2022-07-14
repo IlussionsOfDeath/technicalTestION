@@ -1,11 +1,11 @@
 import React from 'react';
-import { Keyboard, ScrollView, Text, View } from 'react-native';
+import { ImageBackground, Keyboard, ScrollView, Text, View } from 'react-native';
 
 import CustomHeader from '../components/CustomHeader';
 import CustomButton from '../components/CustomButton';
 import CustomInput from '../components/CustomInput';
 
-import formatNumber from '../hooks/useFormat';
+import formatMoney from '../hooks/useFormat';
 import useForm from '../hooks/useForm';
 
 import { colors, general } from '../assets/customTheme';
@@ -34,12 +34,12 @@ const RequestDetailScreen = (props: any) => {
                     Disposición
                 </Text>
 
-                <View style={ general.containerDetail }>
+                <View style={[ general.containerDetail, general.shadow ]}>
                     <Text style={[ general.labelStatus, { marginBottom: 14, }]}>
                         Tienes disponible
                     </Text>
                     <Text style={ general.textAmount }>
-                        { formatNumber(accountData?.amount) }
+                        { formatMoney(accountData?.amount) }
                     </Text>
                 </View>
 
@@ -60,12 +60,15 @@ const RequestDetailScreen = (props: any) => {
                     Selecciona tu plazo
                 </Text>
 
-                <View style={ general.containerGraphic }>
+                <ImageBackground
+                    source={ require('../assets/images/graphic.png') }
+                    style={ general.containerGraphic }
+                >
                     <Text style={ general.labelGraphic }>Tu pago menual</Text>
-                    <Text style={[ general.labelGraphic, { fontSize: 24, marginTop: 4, }]}>{ formatNumber(12000) }</Text>
+                    <Text style={[ general.labelGraphic, { fontSize: 24, marginTop: 4, }]}>{ formatMoney(12000) }</Text>
                     <Text style={[ general.labelGraphic, { fontSize: 14, }]}>a 60 meses</Text>
                     <Text style={ general.footerGraphic }>Tasa de interés {'\n'} 16.6%</Text>
-                </View>
+                </ImageBackground>
 
                 <CustomButton
                     label='LO QUIERO'

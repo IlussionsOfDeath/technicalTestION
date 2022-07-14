@@ -3,7 +3,7 @@ import { LogBox, ScrollView, Text, View } from 'react-native';
 
 import CustomHeader from '../components/CustomHeader';
 
-import formatNumber from '../hooks/useFormat';
+import formatMoney from '../hooks/useFormat';
 
 import { general } from '../assets/customTheme';
 
@@ -25,7 +25,7 @@ const HomeDetailScreen = (item: any) => {
                     Detalle del movimiento
                 </Text>
 
-                <View style={[ general.containerDetail, { height: 'auto' }]}>
+                <View style={[ general.containerDetail, general.shadow, { height: 'auto' }]}>
                     <View style={{ marginBottom: 20, }}>
                         <Text style={[ general.labelStatus, { marginBottom: 14, }]}>
                             Nombre del movimiento
@@ -47,7 +47,7 @@ const HomeDetailScreen = (item: any) => {
                             Monto
                         </Text>
                         <Text style={ general.textAmount }>
-                            { formatNumber(data.amount) }
+                            { formatMoney(data.amount) }
                         </Text>
                     </View>
                 </View>
